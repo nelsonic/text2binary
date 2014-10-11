@@ -1,8 +1,11 @@
-text2binary
+Text to Binary
 ===========
 
 Convert any ascii text (any english words) to binary (bytes)
 
+## Try: http://text2binary.herokuapp.com
+
+![demo app](http://i.imgur.com/tW7AYjE.png)
 
 ## Useful Links
 
