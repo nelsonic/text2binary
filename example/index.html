@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+<title>Text to (8-bit) Binary Converter</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<meta name=description content="Text (ascii) to Binary (8-bit) converter.">
+<h1>Text &gt; Binary </h1>
+
+<noscript>
+  <strong>To use this tool, please
+  <a href=http://enable-javascript.com/>enable JavaScript</a>
+  and reload the page.
+  </strong>
+</noscript>
+
+<textarea autofocus placeholder="Write your text here!"></textarea>
+<div>01001000 01100101 01101100 01101100 01101111</div>
+
+<footer>
+  <small>
+    made by <a href="https://github.com/nelsonic">@nelsonic</a>
+    ~ code on <a href="https://github.com/nelsonic/text2binary">GitHub</a>
+  <small>
+</footer>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+function text2binary (str) {
+  var arr = str.split('');
+  return binaryArr = arr.map(function(char){
+    var number = char.charCodeAt().toString(2);
+    return '00000000'.slice(String(number).length) + number; // Leading Zeros
+  })
+}
+
+$(function () {
+  console.log('Hello >> '+text2binary('Hello' ).join(' '));
+
+  $('textarea').keyup(function () {
+    $('div').text(text2binary( $(this).val() ).join(' '))
+  })
+});
+
+</script>
+
+<style>
+body {
+  padding: 2em;
+}
+
+h1 {
+    margin-left:  40%;
+    width: 100%;
+}
+
+textarea {
+  font-size: 2.5em;
+  width: 49%;
+  float: left;
+}
+div {
+  width: 49%;
+  border: 1px solid black;
+  font-size: 1.5em;
+  background-color: black;
+  color: #6F3;
+  padding: 0.5em;
+  float: right;
+  font-family: “Courier New”, Courier, “Lucida Sans Typewriter”, “Lucida Typewriter”, monospace;
+}
+
+textarea, div {
+  min-height: 200px;
+}
+
+footer {
+  padding-top: 2em;
+  clear: both;
+  width: 100%;
+}
+small {
+  padding-left: 40%;
+}
+
+</style>
+
+</body>
+</html>

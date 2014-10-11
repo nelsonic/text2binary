@@ -1,0 +1,33 @@
+{
+  "name": "text2binary",
+  "version": "1.0.0",
+  "description": "Convert english (ascii) text to 8-bit binary.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "lab",
+    "dev": "nodemon example/web.js",
+    "start": "node example/web.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelsonic/text2binary.git"
+  },
+  "keywords": [
+    "ascii",
+    "english",
+    "binary",
+    "8-bit",
+    "converter"
+  ],
+  "author": "nelsonic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonic/text2binary/issues"
+  },
+  "homepage": "https://github.com/nelsonic/text2binary",
+  "dependencies": {
+  }
+}

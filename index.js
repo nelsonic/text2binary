@@ -1,12 +1,7 @@
-var word = 'Your Word Here!';
-var arr = word.split('');
-
-function zeroPad(number) {
-	return '00000000'.slice(String(number).length) + number;
+function text2binary (str) {
+  var arr = word.split('');
+  return binaryArr = arr.map(function(char){
+    var number = char.charCodeAt().toString(2);
+    return '00000000'.slice(String(number).length) + number; // Leading Zeros
+  })
 }
-
-var binaryArr = arr.map(function(char){
-  return zeroPad( char.charCodeAt().toString(2) );
-})
-
-console.log( binaryArr.join(' ') );
